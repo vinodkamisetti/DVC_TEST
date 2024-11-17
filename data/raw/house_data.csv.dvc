@@ -1,0 +1,5 @@
+outs:
+- md5: c35ea4e742f9a5cb06600c3822222ac8
+  size: 119729
+  hash: md5
+  path: house_data.csv
