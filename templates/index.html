@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Predict House Price</h2>
+        <form id="prediction-form" action="/predict" method="POST">
+            <div class="form-group">
+                <label for="bedroom">Bedrooms:</label>
+                <input type="number" id="bedroom" name="bedroom" required>
+            </div>
+            <div class="form-group">
+                <label for="bathroom">Bathrooms:</label>
+                <input type="number" id="bathroom" name="bathroom" required>
+            </div>
+            <div class="form-group">
+                <label for="sqft_living">Living Area (sqft):</label>
+                <input type="number" id="sqft_living" name="sqft_living" required>
+            </div>
+            <div class="form-group">
+                <label for="floor">Floors:</label>
+                <input type="number" id="floor" name="floor" required>
+            </div>
+            <div class="form-group">
+                <label for="yr_built">Year Built:</label>
+                <input type="number" id="yr_built" name="yr_built" required>
+            </div>
+            <button type="submit">Predict Price</button>
+        </form>
+    </div>
+</body>
+</html>
